@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="small_widget_description">A small home screen widget</string>
+    <string name="medium_widget_description">A medium home screen widget</string>
+    <string name="large_widget_description">A large home screen widget</string>
+    <string name="progress_widget_description">A progress indicator widget</string>
+    <string name="battery_widget_description">A battery status widget</string>
+    <string name="clock_widget_description">A clock and date widget</string>
+    <string name="app_name">Native Home Widgets</string>
+    <string name="widget_loading">Loading…</string>
+    <string name="widget_error">Unable to load widget</string>
+</resources>

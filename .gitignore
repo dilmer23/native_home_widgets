@@ -1,0 +1,42 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Flutter/Dart/Pub related
+/pubspec.lock
+**/doc/api/
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+
+# Android
+example/android/local.properties
+example/android/.gradle/
+
+# iOS
+example/ios/Podfile.lock
+example/ios/.symlinks/
+example/ios/Flutter/Flutter.framework/
+example/ios/Flutter/Flutter.podspec
+
+# Coverage
+coverage/
+
+# VS Code
+.vscode/

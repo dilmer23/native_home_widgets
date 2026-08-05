@@ -1,0 +1,40 @@
+name: native_home_widgets
+description: The most complete Flutter plugin for Home Screen Widgets. Create, configure, and manage widgets entirely from Flutter.
+version: 0.5.0
+homepage: https://github.com/your-org/native_home_widgets
+repository: https://github.com/your-org/native_home_widgets
+issue_tracker: https://github.com/your-org/native_home_widgets/issues
+
+environment:
+  sdk: ^3.5.4
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+topics:
+  - widgets
+  - home-screen
+  - widgetkit
+  - glance
+  - native
+
+platforms:
+  android:
+  ios:
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.example.native_home_widgets
+        pluginClass: NativeHomeWidgetsPlugin
+      ios:
+        pluginClass: NativeHomeWidgetsPlugin

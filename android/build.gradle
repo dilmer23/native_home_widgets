@@ -1,0 +1,96 @@
+group = "com.example.native_home_widgets"
+version = "1.0-SNAPSHOT"
+
+buildscript {
+    ext.kotlin_version = "1.9.24"
+    ext.glance_version = "1.1.0"
+    ext.datastore_version = "1.1.1"
+    ext.coroutines_version = "1.8.1"
+    ext.coil_version = "2.6.0"
+    ext.work_version = "2.9.1"
+    ext.core_ktx_version = "1.13.1"
+    ext.appcompat_version = "1.7.0"
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.5.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+android {
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.example.native_home_widgets"
+    }
+
+    compileSdk = 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    defaultConfig {
+        minSdk = 21
+    }
+
+    dependencies {
+        implementation("androidx.core:core-ktx:$core_ktx_version")
+        implementation("androidx.appcompat:appcompat:$appcompat_version")
+
+        // Jetpack Glance — declarative widget framework
+        implementation("androidx.glance:glance:$glance_version")
+        implementation("androidx.glance:glance-appwidget:$glance_version")
+
+        // DataStore — modern persistence
+        implementation("androidx.datastore:datastore-preferences:$datastore_version")
+
+        // Coroutines
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
+
+        // Coil — image loading for Glance
+        implementation("io.coil-kt:coil-compose:$coil_version")
+
+        // WorkManager — background widget updates
+        implementation("androidx.work:work-runtime-ktx:$work_version")
+
+        testImplementation("org.jetbrains.kotlin:kotlin-test")
+        testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version")
+        testImplementation("androidx.datastore:datastore-core:$datastore_version")
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+
+            testLogging {
+                events "passed", "skipped", "failed", "standardOut", "standardError"
+                outputs.upToDateWhen { false }
+                showStandardStreams = true
+            }
+        }
+    }
+}
