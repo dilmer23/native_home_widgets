@@ -29,3 +29,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial public release
 - 62 unit tests covering models, services, and platform interface
 - 6 widget types per platform (Small, Medium, Large, Progress, Battery, Clock)
+- Full documentation: README, CONTRIBUTING, ARCHITECTURE, ROADMAP
