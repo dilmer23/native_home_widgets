@@ -2,8 +2,11 @@
 
 [![pub version](https://img.shields.io/pub/v/native_home_widgets.svg)](https://pub.dev/packages/native_home_widgets)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![stars](https://img.shields.io/github/stars/dilmer23/native_home_widgets?style=social)](https://github.com/dilmer23/native_home_widgets)
 
 The most complete Flutter plugin for Home Screen Widgets. Create, configure, and manage home screen widgets entirely from Flutter — no native code required.
+
+**Source code:** [github.com/dilmer23/native_home_widgets](https://github.com/dilmer23/native_home_widgets)
 
 ## Features
 
